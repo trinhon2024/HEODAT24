@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_edit_recurring"
+        android:title="Edit Recurring" />
+    <item
+        android:id="@+id/action_delete_recurring"
+        android:title="Delete Recurring" />
+</menu>

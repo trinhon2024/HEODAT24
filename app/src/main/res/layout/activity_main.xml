@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/icon1"
+    tools:context=".MainActivity">
+    <!-- Dashboard Title -->
+    <LinearLayout
+        android:layout_width="366dp"
+        android:layout_height="34dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="98dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/icon3" />
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/adamina"
+            android:text="Welcome, User!"
+            android:textColor="#3F51B5"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!-- Horizontal Button Group -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tvExpenseMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Expense Money"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvTitleMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBFCFFFC"
+            android:fontFamily="@font/adamina"
+            android:padding="16dp"
+            android:text="Expense Tracker"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/buttonAddExpense"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Add Expense"
+            android:textSize="14dp"
+            android:backgroundTint="#3A9755"
+            android:textColor="#000000"
+            />
+        <Button
+            android:id="@+id/buttonOverview"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_weight="3"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Overview"
+            android:textSize="14dp"
+            android:backgroundTint="#3A9755"
+            android:textColor="#000000"/>
+        <Button
+            android:id="@+id/buttonRecurringExprnse"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_weight="3"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Add Recurring"
+            android:textSize="14dp"
+            android:backgroundTint="#3A9755"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <!-- Search Bar -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        android:padding="10dp"
+        app:cardElevation="4dp">
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:iconifiedByDefault="false"
+            android:padding="5dp"
+            android:queryHint="Search expenses..."
+            android:textColor="#008000" />
+    </androidx.cardview.widget.CardView>
+    <!-- Expenses List -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="1dp">
+
+        <ListView
+            android:id="@+id/listViewExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="475dp"
+            android:background="@drawable/icon1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:padding="10dp" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Container for Fragments -->
+        <!-- Bottom Navigation View -->
+        <!-- BottomNavigationView -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+</LinearLayout>
